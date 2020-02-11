@@ -17,6 +17,12 @@
 * 强制类型转换：C:(typename) value C++:四种类型转换static_cast<type>(value)、dynamic_cast<>(value)、const_cast<>(value)
 * 主要用于复杂类型的类型推断auto
 ### 第四章
+* 数组array的定义typename name[size];
+* sizeof(variable)是指变量占几个字节
+* cin.getline(name, size)读取一整行数据到字符串内
+* string对象较为方便str1 + str2, str1.size(),读取一行的时候使用getline(cin, str)
+* 原始字符不转义R"(string)"
+* 结构体：
 ### 第五章
 ### 第六章
 * 输出可以设定固定格式，cout.put
