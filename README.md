@@ -31,6 +31,13 @@
 * vector<typename>name(num)定义num个vector，动态数组
 * array<typename, num>name固定长度数组，较为方便安全
 ### 第五章
+* for(int ;condition;loop){} 
+* while(condition){}
+* 计时clock()返回系统时间, CLOCKS_PER_SEC
+* typedef typename newname;重新定义类别
+* for(auto x:variable){}; for(auto &y:variable){}
+* cin<<ch会忽略空格输入，cin.get(ch)可以获取空格，cin.fail()是否到达文件尾or while(cin.get(ch))
+* 嵌套循环，二维数组int name[m][n]
 ### 第六章
 * 输出可以设定固定格式，cout.put
 * 输入数字时cin遇到非数字的认为False

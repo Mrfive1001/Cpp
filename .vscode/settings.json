@@ -22,6 +22,18 @@
         "new": "cpp",
         "ostream": "cpp",
         "stdexcept": "cpp",
-        "streambuf": "cpp"
+        "streambuf": "cpp",
+        "array": "cpp",
+        "ctime": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "fstream": "cpp",
+        "numeric": "cpp",
+        "sstream": "cpp",
+        "utility": "cpp"
     }
 }
