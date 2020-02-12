@@ -22,7 +22,14 @@
 * cin.getline(name, size)读取一整行数据到字符串内
 * string对象较为方便str1 + str2, str1.size(),读取一行的时候使用getline(cin, str)
 * 原始字符不转义R"(string)"
-* 结构体：
+* 结构体：struct Name{};
+* 指针：type* Name;type* Name[];地址长度为8或者4字节，记得初始化
+* 申请内存：malloc和new typename* name = new typename;new比malloc有较多优势
+* 删除内存：delete p;释放p所指向的内存块，但是p仍然可以指向别的内存；防止内存泄漏
+* 动态数组：typename* name = new typename [number]，其中number可以是变量，从而实现动态修改数组数量；指针在很多时候可以等同于数组名;delete [] name;
+* 利用->访问指针对应结构体的成员
+* vector<typename>name(num)定义num个vector，动态数组
+* array<typename, num>name固定长度数组，较为方便安全
 ### 第五章
 ### 第六章
 * 输出可以设定固定格式，cout.put
