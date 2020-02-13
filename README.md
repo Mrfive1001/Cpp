@@ -39,6 +39,10 @@
 * cin<<ch会忽略空格输入，cin.get(ch)可以获取空格，cin.fail()是否到达文件尾or while(cin.get(ch))
 * 嵌套循环，二维数组int name[m][n]
 ### 第六章
+* cctype包含判断字符是否符合某种格式的函数isalpha(),isdigits(),isspace(),ispunct()
+* condition?value1:value2类似于Python的 value1 if condition else value2
+* switch() {case value:} 
+* 文件操作的时候使用fstream，ofstream object
 * 输出可以设定固定格式，cout.put
 * 输入数字时cin遇到非数字的认为False
 * 输入字符时cin遇到ctrl+z认为结束
