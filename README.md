@@ -48,3 +48,12 @@
 * 输入字符时cin遇到ctrl+z认为结束
 * 输入字符串或者string时遇到ctrl+z结束
 * 输入一行字符cin.getline(object, size)
+### 第七章
+* 函数提供声明、定义及调用三个方面，注意函数原型(提前定义函数)
+* 返回值(不能传回数组)、输入参数、函数主体
+* 函数参数及按值传递或者按引用传递
+* 函数参数传入数组int arr[], int number或者int* arr
+* const int *arr指arr指向的变量不可改变，而int const *arr指不可以改变arr的指向
+* const定义变量必须进行初始化
+* 二维数组传入函数，第二个维度必须指定int arr[][n] or int (*arr)[n]
+* 
