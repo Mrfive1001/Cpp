@@ -35,6 +35,7 @@
         "numeric": "cpp",
         "sstream": "cpp",
         "utility": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iomanip": "cpp"
     }
 }
