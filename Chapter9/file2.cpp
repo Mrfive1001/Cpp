@@ -25,4 +25,6 @@ void show_polar(polar ppos)
     cout << "distance =  " << ppos.distance;
     cout << " angle = " << ppos.angle*Rad_to_deg;
     cout << "degrees\n";
+    print();
 }
+

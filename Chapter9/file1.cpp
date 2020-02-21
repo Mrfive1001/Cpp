@@ -16,6 +16,7 @@ int main()
         cout << "Next two numbers(q to quit): ";
     }
     cout << "Bye!\n";
+    print();
     return 0;
 
 }

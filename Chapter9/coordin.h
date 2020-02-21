@@ -1,4 +1,7 @@
 #pragma  once
+# include <iostream>
+
+inline void print();
 
 struct polar
 {
@@ -14,3 +17,8 @@ struct rect
 
 polar rect_to_polar(rect);
 void show_polar(polar);
+
+inline void print()
+{
+    std::cout << "header prints.\n";
+}
