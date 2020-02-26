@@ -16,3 +16,14 @@ class TableTennisPlayer
         bool HasTable() const { return hasTable; }
         void ResetTable(bool v) { hasTable = v; }
 };
+
+class RatedPlayer: public TableTennisPlayer
+{
+    private:
+        int rating;
+    public:
+        RatedPlayer(int r = 0, const string &fn = "none", const string &ln = "none", bool ht = false);
+        RatedPlayer(int r, const TableTennisPlayer& tp);
+        int Rating() const { return rating; }
+        void ResetRating(int r) {rating = r;}
+};
