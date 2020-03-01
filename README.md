@@ -113,7 +113,7 @@
 * 成员初始化列表：对于引用类型和const类型的成员变量来说必须使用成员初始化列表进行初始化，否则将会出现未被初始化的错误；变量被初始化的顺序与声明的顺序相同。vector::vector(int a):name(a){}
 ### 第十三章
 * 对于类内成员初始化：
-  * 数组和静态非常量不能进行初始化
+  * 数组不可初始化
   * 其余都可在类内初始化
 * 继承的三种方式class son : type father
   * public: 是指将基类的各个属性成员变成派生类的对应成员 is-a关系
@@ -131,6 +131,15 @@
 * 虚函数的实现是利用虚函数表
 * 如果派生类函数与基类函数同名，但是参数不同。此时不论有没有virtual基类函数都被隐藏
 * 如果同名参数相同，没有virtual的时候基类函数被隐藏
+### 第十四章-第十五章
+* 类模板template <clase type>类的声明，同时模板定义和声明放在一个文件里面
+* 对于类模板的定义需要将原始的class::fun()改为template <class type>\n   class<type>::fun()
+* 类内嵌套结构体和类
+* 异常：
+  * cstdlib的abort函数用来出现异常退出程序
+  * try catch throw
+* RTTI(Real time type identification)
+  * dynamic_cast
 
 
 ## Effective C++

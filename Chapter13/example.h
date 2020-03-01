@@ -17,6 +17,7 @@ namespace example
     class Derived : public Base
     {
         private:
+            static int s_static;
             double s = 10;
         public:
             Derived() = default;
@@ -24,5 +25,6 @@ namespace example
             Derived(const Base &, double);
             void Print() const;
             virtual ~Derived() = default;
+            static void GetNumber();
     };
 }
