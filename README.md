@@ -140,8 +140,46 @@
   * try catch throw
 * RTTI(Real time type identification)
   * dynamic_cast
-
-
+### 第十六章
+* string有7种构造函数可以用来初始化
+* C风格字符的输入：cin >> str; cin.get(str, number)读取number个字符；cin.getline(str, number)读取一行最多number个字符；
+* string类型的输入：cin >> string;getline(cin , string)读入一行
+* 内含函数：
+  * size(), length()返回字符个数
+  * find(char, pos = 0)返回首次出现的位置，如果未找到返回string::npos
+  * reserve()申请最小内存，capacity()返回当前内存块大小
+* 智能指针必须包括memory头文件,另外智能指针只能指向new出来的地址，建议使用shared_ptr
+  * auto_ptr是以前版本的，尽量少用auto_ptr<type> ps (new type(value))，可能会删除同一个地址两次
+  * shared_ptr<type> ps (new type(value))，采用引用计数的方式，当计数为零的时候将占用的内存释放
+  * unique_ptr<type> ps (new type(value))，是指同一个内存仅仅属于某个对象，其余指向的对象不可使用
+* STL包含了一些容器，迭代器和函数
+  * 容器：vector; vector<type> name(number);size();begin();end();swap()(用于释放vector的内存vector<type>().swap(Target)，而clear()函数仅仅删除元素，但是内存仍然存在);push_back();erase(iter1, iter2)删除iter1到iter2区间内的元素;insert(iter1, iter2, iter3)表示将另一个容器的iter2到iter3插入到当前容器的iter1前面;
+  * 函数algorithm头文件：
+    * for_each(iter1,iter2, fun)，对于iter1到iter2指针指向的每个元素执行fun这个函数,适用于任何容器
+    * random_shuffle(iter1, iter2) 随机排列iter1到iter2的所有元素，要求容器支持随机访问
+    * sort(iter1, iter2) 进行排序，要求容器支持随机访问并且元素定义了operator <()
+    * 基于范围的for循环 for(auto x:vector) {}
+* 模板使得算法独立于数据结构，而迭代器使得算法独立于使用的数据类型
+* 容器(deque, list, priority_deque, stack, vector, map, multi_map, set, multiset, unordered_set,unordered_map, queue)：
+  * 概念：容器用于其他对象的存储，被存储的对象必须是同一类型且数据为容器所独有，这意味着容器过期时，里面内容也会过期；
+  * 通用特性：X::value_type;X();X u(a);a.begin();a == b;
+* 序列(deque, list, priority_deque, stack, vector, queue)
+  * 通用特性：要求线性顺序，排列顺序有序
+  * X a(n, t);a.insert(p,t)将t插入到p的前面;a.erase(p)删除p指向的指针;a.erase(p, q);a.clear()
+  * 部分对象特性：front();back();push_back();push_front();pop_front();pop_back();
+  * vector:扩容原理以及内存连续内存，支持随机访问，主要从后方插入或者取出元素
+  * deque:double end queue，可以从前面或者后方插入元素，支持随机访问
+  * list:双向链表，不支持数组表示法和随机访问merge(),sort()
+  * forward_list:单向链表
+  * queue:单向队列，限制更多，不允许随机访问，仅能查看队首队尾front(),back(),push(),pop()
+  * priority_queue:是一种队列，最大的元素总是在队首priority_queue<type> p(10);
+  * stack:栈限制很多，查看栈顶，是否为空以及弹出插入
+* 关联容器表示键值对的映射，通常是基于某种树的(set, multiset, map, multimap)
+  * set:表示不重复的集合，可翻转可排序set<type> Name insert(), set_union()
+  * multimap:可翻转可排序，同一个键可以对应多个value，multimap<type1, type2> Name;插入pair<type1, type2> {};equal_range()返回迭代器对象组成的pair表示等于的起始位置和结束位置
+* 无序关联容器表示存储的值不按照某些顺序关联，底层基于哈希表，效率更高(unordered_set, unordered_map)
+* 重载类内()运算符，可以直接调用对象type operator()(){}
+* STL算法库
 ## Effective C++
 * 条款1：将C++认为是四个部分组成的联盟(basic C, object-oriented C++, Template, STL)
   * Basic C包括了指针、传值、blocks、语句、预处理、内置类型、数组
