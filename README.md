@@ -179,7 +179,10 @@
   * multimap:可翻转可排序，同一个键可以对应多个value，multimap<type1, type2> Name;插入pair<type1, type2> {};equal_range()返回迭代器对象组成的pair表示等于的起始位置和结束位置
 * 无序关联容器表示存储的值不按照某些顺序关联，底层基于哈希表，效率更高(unordered_set, unordered_map)
 * 重载类内()运算符，可以直接调用对象type operator()(){}
-* STL算法库
+* STL算法库分为四类：非修改式序列操作、修改序列操作、排序相关、通用数字运算
+* STL算法 也可以分为就地版本和复制到某个位置版本，默认复制版本函数加上_copy()且需要传入输出结果的迭代器对象
+* STL与string：string也有begin，end等函数
+* transform(iter1, iter2, iter3, fun)
 ## Effective C++
 * 条款1：将C++认为是四个部分组成的联盟(basic C, object-oriented C++, Template, STL)
   * Basic C包括了指针、传值、blocks、语句、预处理、内置类型、数组
