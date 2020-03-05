@@ -183,6 +183,21 @@
 * STL算法 也可以分为就地版本和复制到某个位置版本，默认复制版本函数加上_copy()且需要传入输出结果的迭代器对象
 * STL与string：string也有begin，end等函数
 * transform(iter1, iter2, iter3, fun)
+### 第十八章 C++11新标准
+* 增加long long类型
+* 统一的初始化列表
+* auto，decltype(x) y
+* using type = ...
+* nullptr
+* 智能指针
+* explicit禁止自动转换
+* 类内成员初始化
+* 基于范围for循环
+* 左值引用是指引用的变量是变量名或者解除引用的指针，而右值引用是指指向的对象不能使用地址运算符，放在等号右侧的变量例如字面常量或者表达式以及函数返回值，右值引用的目的是为了移动语义
+* default函数用来显示声明某些默认方法，delete用于显示删除
+* 委托构造函数
+* override用于显示声明派生类覆盖了基类的虚方法，防止错误
+* final用于禁止派生来覆盖某些虚函数
 ## Effective C++
 * 条款1：将C++认为是四个部分组成的联盟(basic C, object-oriented C++, Template, STL)
   * Basic C包括了指针、传值、blocks、语句、预处理、内置类型、数组
